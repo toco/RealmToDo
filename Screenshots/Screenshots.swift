@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class Screenshots: XCTestCase {
+class Screenshots: SwiftKIFTestCase {
     
     override func setUp() {
         super.setUp()

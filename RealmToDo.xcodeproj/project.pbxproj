@@ -11,6 +11,7 @@
 		DDDD081E19D9AB37001DC81A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDDD081C19D9AB37001DC81A /* Localizable.strings */; };
 		DDDD082619D9AB4B001DC81A /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDDD082519D9AB4B001DC81A /* Launch Screen.xib */; };
 		DDDD084019D9AC3F001DC81A /* Screenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD083F19D9AC3F001DC81A /* Screenshots.swift */; };
+		DDDD085219D9ACE9001DC81A /* SwiftKIFTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD085119D9ACE9001DC81A /* SwiftKIFTestCase.swift */; };
 		F0CF656C1992B5AC004A9682 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CF656B1992B5AC004A9682 /* AppDelegate.swift */; };
 		F0CF656E1992B5AC004A9682 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CF656D1992B5AC004A9682 /* ViewController.swift */; };
 		F0CF65731992B5AC004A9682 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0CF65721992B5AC004A9682 /* Images.xcassets */; };
@@ -110,6 +111,8 @@
 		DDDD083B19D9AC3F001DC81A /* Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Screenshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDD083E19D9AC3F001DC81A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDDD083F19D9AC3F001DC81A /* Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshots.swift; sourceTree = "<group>"; };
+		DDDD085119D9ACE9001DC81A /* SwiftKIFTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftKIFTestCase.swift; sourceTree = "<group>"; };
+		DDDD085419D9AD0B001DC81A /* Screenshots-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Screenshots-Bridging-Header.h"; sourceTree = "<group>"; };
 		F0CF65661992B5AC004A9682 /* RealmToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CF656A1992B5AC004A9682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0CF656B1992B5AC004A9682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,7 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				DDDD083F19D9AC3F001DC81A /* Screenshots.swift */,
+				DDDD085119D9ACE9001DC81A /* SwiftKIFTestCase.swift */,
 				DDDD083D19D9AC3F001DC81A /* Supporting Files */,
+				DDDD085419D9AD0B001DC81A /* Screenshots-Bridging-Header.h */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -470,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDDD085219D9ACE9001DC81A /* SwiftKIFTestCase.swift in Sources */,
 				DDDD084019D9AC3F001DC81A /* Screenshots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +536,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 524CA1EAA2A14EC2B8500E50 /* Pods-Screenshots.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -541,6 +548,8 @@
 				INFOPLIST_FILE = Screenshots/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Screenshots/Screenshots-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RealmToDo.app/RealmToDo";
 			};
 			name = Debug;
@@ -549,6 +558,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 524CA1EAA2A14EC2B8500E50 /* Pods-Screenshots.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -556,6 +566,7 @@
 				INFOPLIST_FILE = Screenshots/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Screenshots/Screenshots-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RealmToDo.app/RealmToDo";
 			};
 			name = Release;
