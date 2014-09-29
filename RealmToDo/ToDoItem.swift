@@ -1,6 +1,6 @@
 import Realm
 
-class ToDoItem: RLMObject {
-    dynamic var name = ""
-    dynamic var finished = false
+public class ToDoItem: RLMObject {
+    public dynamic var name = ""
+    public dynamic var finished = false
 }

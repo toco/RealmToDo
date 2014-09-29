@@ -8,29 +8,53 @@
 
 import UIKit
 import XCTest
+import Realm
+import RealmToDo
 
 class Screenshots: SwiftKIFTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    override func beforeAll() {
+        resetDatabase()
+    }
+        
+	func testTakeScreenshots() {
+		tester().tapViewWithAccessibilityLabel(localizedAccessibilityString("uibutton.navbar.add.button.title"), traits: UIAccessibilityTraitButton)
+		
+		tester().waitForKeyboard()
+		tester().enterTextIntoCurrentFirstResponder(localizedString("UploadText"))
+		
+		
+		tester().tapViewWithAccessibilityLabel(localizedAccessibilityString("done.button"))
+		
+		tester().waitForTimeInterval(0.5)
+		
+		
+		tester().tapViewWithAccessibilityLabel(localizedString("TakeScreenshotsText"))
+		
+	}
+	
+	
+// MARK: - Helpers
+	
+	func resetDatabase() {
+		let realm = RLMRealm.defaultRealm()
+		realm.transactionWithBlock { () -> Void in
+			realm.deleteObjects(ToDoItem.allObjects())
+			var item = ToDoItem()
+			item.name = self.localizedString("TakeScreenshotsText")
+			realm.addObject(item)
+		}
+	}
+	
+    func localizedString(key :String) -> String {
+        return NSLocalizedString(key, bundle: NSBundle(forClass: Screenshots.self), comment: "")
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func localizedAccessibilityString(key: String) -> String {
+        let resourcePath = NSBundle(identifier: "com.apple.UIKit.axbundle").pathForResource(nil, ofType: "strings")!
+        let localization = NSDictionary(contentsOfFile:resourcePath)
+        return localization[key] as String
+
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }

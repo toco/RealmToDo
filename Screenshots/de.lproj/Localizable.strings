@@ -6,6 +6,5 @@
   Copyright (c) 2014 Piet Brauer. All rights reserved.
 */
 
-"PlaceholderText" = "Item eingeben";
-"ToDoSectionTitle" = "Offen";
-"FinishedSectionTitle" = "Abgeschlossen";
+"UploadText" = "Zum Store hochladen";
+"TakeScreenshotsText" = "Screenshots machen";

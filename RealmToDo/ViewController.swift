@@ -16,11 +16,22 @@ class ViewController: UITableViewController, AddViewControllerDelegate {
         }
     }
 
+    var notificationToken: RLMNotificationToken?
+    
+    deinit {
+        RLMRealm.defaultRealm().removeNotification(notificationToken)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "CellIdentifier")
         setupNavigationBar()
+        
+        notificationToken = RLMRealm.defaultRealm().addNotificationBlock { [unowned self] (notificationName, realm) -> Void in
+            self.tableView.reloadData()
+        }
     }
+    
 
     func setupNavigationBar() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addButtonAction")
