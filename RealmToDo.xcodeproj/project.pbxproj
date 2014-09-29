@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DDDD081E19D9AB37001DC81A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDDD081C19D9AB37001DC81A /* Localizable.strings */; };
 		DDDD082619D9AB4B001DC81A /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDDD082519D9AB4B001DC81A /* Launch Screen.xib */; };
+		DDDD084019D9AC3F001DC81A /* Screenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD083F19D9AC3F001DC81A /* Screenshots.swift */; };
 		F0CF656C1992B5AC004A9682 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CF656B1992B5AC004A9682 /* AppDelegate.swift */; };
 		F0CF656E1992B5AC004A9682 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CF656D1992B5AC004A9682 /* ViewController.swift */; };
 		F0CF65731992B5AC004A9682 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0CF65721992B5AC004A9682 /* Images.xcassets */; };
@@ -20,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DDDD084119D9AC3F001DC81A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0CF655E1992B5AC004A9682 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0CF65651992B5AC004A9682;
+			remoteInfo = RealmToDo;
+		};
 		F0CF65791992B5AD004A9682 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F0CF655E1992B5AC004A9682 /* Project object */;
@@ -96,6 +104,9 @@
 		DDDD081D19D9AB37001DC81A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DDDD082419D9AB3F001DC81A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DDDD082519D9AB4B001DC81A /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		DDDD083B19D9AC3F001DC81A /* Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Screenshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDDD083E19D9AC3F001DC81A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDDD083F19D9AC3F001DC81A /* Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screenshots.swift; sourceTree = "<group>"; };
 		F0CF65661992B5AC004A9682 /* RealmToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CF656A1992B5AC004A9682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0CF656B1992B5AC004A9682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +121,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DDDD083819D9AC3F001DC81A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0CF65631992B5AC004A9682 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,11 +146,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DDDD083C19D9AC3F001DC81A /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				DDDD083F19D9AC3F001DC81A /* Screenshots.swift */,
+				DDDD083D19D9AC3F001DC81A /* Supporting Files */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
+		DDDD083D19D9AC3F001DC81A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDDD083E19D9AC3F001DC81A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F0CF655D1992B5AC004A9682 = {
 			isa = PBXGroup;
 			children = (
 				F0CF65681992B5AC004A9682 /* RealmToDo */,
 				F0CF657B1992B5AD004A9682 /* RealmToDoTests */,
+				DDDD083C19D9AC3F001DC81A /* Screenshots */,
 				F0CF65671992B5AC004A9682 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -142,6 +178,7 @@
 			children = (
 				F0CF65661992B5AC004A9682 /* RealmToDo.app */,
 				F0CF65781992B5AD004A9682 /* RealmToDoTests.xctest */,
+				DDDD083B19D9AC3F001DC81A /* Screenshots.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,6 +240,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DDDD083A19D9AC3F001DC81A /* Screenshots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDDD084A19D9AC3F001DC81A /* Build configuration list for PBXNativeTarget "Screenshots" */;
+			buildPhases = (
+				DDDD083719D9AC3F001DC81A /* Sources */,
+				DDDD083819D9AC3F001DC81A /* Frameworks */,
+				DDDD083919D9AC3F001DC81A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDDD084219D9AC3F001DC81A /* PBXTargetDependency */,
+			);
+			name = Screenshots;
+			productName = Screenshots;
+			productReference = DDDD083B19D9AC3F001DC81A /* Screenshots.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F0CF65651992B5AC004A9682 /* RealmToDo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0CF65821992B5AD004A9682 /* Build configuration list for PBXNativeTarget "RealmToDo" */;
@@ -249,6 +304,10 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Piet Brauer";
 				TargetAttributes = {
+					DDDD083A19D9AC3F001DC81A = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = F0CF65651992B5AC004A9682;
+					};
 					F0CF65651992B5AC004A9682 = {
 						CreatedOnToolsVersion = 6.0;
 					};
@@ -280,6 +339,7 @@
 			targets = (
 				F0CF65651992B5AC004A9682 /* RealmToDo */,
 				F0CF65771992B5AD004A9682 /* RealmToDoTests */,
+				DDDD083A19D9AC3F001DC81A /* Screenshots */,
 			);
 		};
 /* End PBXProject section */
@@ -330,6 +390,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DDDD083919D9AC3F001DC81A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0CF65641992B5AC004A9682 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,6 +417,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DDDD083719D9AC3F001DC81A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDDD084019D9AC3F001DC81A /* Screenshots.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0CF65621992B5AC004A9682 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,6 +447,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DDDD084219D9AC3F001DC81A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0CF65651992B5AC004A9682 /* RealmToDo */;
+			targetProxy = DDDD084119D9AC3F001DC81A /* PBXContainerItemProxy */;
+		};
 		F0CF657A1992B5AD004A9682 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F0CF65651992B5AC004A9682 /* RealmToDo */;
@@ -397,6 +477,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DDDD084319D9AC3F001DC81A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Screenshots/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RealmToDo.app/RealmToDo";
+			};
+			name = Debug;
+		};
+		DDDD084419D9AC3F001DC81A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Screenshots/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RealmToDo.app/RealmToDo";
+			};
+			name = Release;
+		};
 		F0CF65801992B5AD004A9682 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -533,6 +645,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DDDD084A19D9AC3F001DC81A /* Build configuration list for PBXNativeTarget "Screenshots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDDD084319D9AC3F001DC81A /* Debug */,
+				DDDD084419D9AC3F001DC81A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F0CF65611992B5AC004A9682 /* Build configuration list for PBXProject "RealmToDo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
