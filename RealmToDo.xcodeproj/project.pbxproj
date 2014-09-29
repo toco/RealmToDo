@@ -640,6 +640,7 @@
 		F0CF65831992B5AD004A9682 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = RealmToDo/Info.plist;
@@ -651,6 +652,7 @@
 		F0CF65841992B5AD004A9682 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = RealmToDo/Info.plist;
