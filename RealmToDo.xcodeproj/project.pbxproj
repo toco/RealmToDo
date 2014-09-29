@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		968189B2CD084797880823C5 /* libPods-Screenshots.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 765F8CD652BF4A2889D275F5 /* libPods-Screenshots.a */; };
 		DDDD081E19D9AB37001DC81A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDDD081C19D9AB37001DC81A /* Localizable.strings */; };
 		DDDD082619D9AB4B001DC81A /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDDD082519D9AB4B001DC81A /* Launch Screen.xib */; };
 		DDDD084019D9AC3F001DC81A /* Screenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD083F19D9AC3F001DC81A /* Screenshots.swift */; };
@@ -101,6 +102,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		524CA1EAA2A14EC2B8500E50 /* Pods-Screenshots.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Screenshots.xcconfig"; path = "Pods/Pods-Screenshots.xcconfig"; sourceTree = "<group>"; };
+		765F8CD652BF4A2889D275F5 /* libPods-Screenshots.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Screenshots.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDD081D19D9AB37001DC81A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DDDD082419D9AB3F001DC81A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DDDD082519D9AB4B001DC81A /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				968189B2CD084797880823C5 /* libPods-Screenshots.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +150,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		461801222D8C4054B3C6106C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				765F8CD652BF4A2889D275F5 /* libPods-Screenshots.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DDDD083C19D9AC3F001DC81A /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +182,8 @@
 				F0CF657B1992B5AD004A9682 /* RealmToDoTests */,
 				DDDD083C19D9AC3F001DC81A /* Screenshots */,
 				F0CF65671992B5AC004A9682 /* Products */,
+				524CA1EAA2A14EC2B8500E50 /* Pods-Screenshots.xcconfig */,
+				461801222D8C4054B3C6106C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -244,9 +258,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDDD084A19D9AC3F001DC81A /* Build configuration list for PBXNativeTarget "Screenshots" */;
 			buildPhases = (
+				05EC9B6F00184841B6F84952 /* Check Pods Manifest.lock */,
 				DDDD083719D9AC3F001DC81A /* Sources */,
 				DDDD083819D9AC3F001DC81A /* Frameworks */,
 				DDDD083919D9AC3F001DC81A /* Resources */,
+				5CC899487ADA4AED8236E88C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -416,6 +432,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05EC9B6F00184841B6F84952 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5CC899487ADA4AED8236E88C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Screenshots-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DDDD083719D9AC3F001DC81A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -479,6 +528,7 @@
 /* Begin XCBuildConfiguration section */
 		DDDD084319D9AC3F001DC81A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 524CA1EAA2A14EC2B8500E50 /* Pods-Screenshots.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -497,6 +547,7 @@
 		};
 		DDDD084419D9AC3F001DC81A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 524CA1EAA2A14EC2B8500E50 /* Pods-Screenshots.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -652,6 +703,7 @@
 				DDDD084419D9AC3F001DC81A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0CF65611992B5AC004A9682 /* Build configuration list for PBXProject "RealmToDo" */ = {
 			isa = XCConfigurationList;
