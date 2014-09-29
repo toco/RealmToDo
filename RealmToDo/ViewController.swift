@@ -52,9 +52,9 @@ class ViewController: UITableViewController, AddViewControllerDelegate {
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "To do"
+            return NSLocalizedString("ToDoSectionTitle", comment: "")
         case 1:
-            return "Finished"
+            return NSLocalizedString("FinishedSectionTitle", comment: "")
         default:
             return ""
         }

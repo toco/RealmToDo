@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  RealmToDo
+
+  Created by Tobias Conradi on 29.09.14.
+  Copyright (c) 2014 Piet Brauer. All rights reserved.
+*/
+
+"PlaceholderText" = "Type in item";
+"To do" = "To do";
+"FinishedSectionTitle" = "Finished";

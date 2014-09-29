@@ -23,7 +23,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
 
     func setupTextField() {
         textField = UITextField(frame: CGRectZero)
-        textField?.placeholder = "Type in item"
+        textField?.placeholder = NSLocalizedString("PlaceholderText", comment: "Placeholder for add view")
         textField?.delegate = self
         view.addSubview(textField!)
     }
