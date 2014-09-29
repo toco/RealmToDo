@@ -33,11 +33,11 @@ class ViewController: UITableViewController, AddViewControllerDelegate {
         presentViewController(navController, animated: true, completion: nil)
     }
 
-    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
 
-    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
             return Int(todos.count)
@@ -49,7 +49,7 @@ class ViewController: UITableViewController, AddViewControllerDelegate {
 
     }
 
-    override func tableView(tableView: UITableView!, titleForHeaderInSection section: Int) -> String! {
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
             return "To do"
@@ -60,7 +60,7 @@ class ViewController: UITableViewController, AddViewControllerDelegate {
         }
     }
 
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath) as UITableViewCell
 
         switch indexPath.section {
@@ -68,19 +68,19 @@ class ViewController: UITableViewController, AddViewControllerDelegate {
             let todoItem = todos.objectAtIndex(UInt(indexPath.row)) as ToDoItem
             var attributedText = NSMutableAttributedString(string: todoItem.name)
             attributedText.addAttribute(NSStrikethroughStyleAttributeName, value: 0, range: NSMakeRange(0, attributedText.length))
-            cell.textLabel.attributedText = attributedText
+            cell.textLabel!.attributedText = attributedText
         case 1:
             let todoItem = finished.objectAtIndex(UInt(indexPath.row)) as ToDoItem
             var attributedText = NSMutableAttributedString(string: todoItem.name)
             attributedText.addAttribute(NSStrikethroughStyleAttributeName, value: 1, range: NSMakeRange(0, attributedText.length))
-            cell.textLabel.attributedText = attributedText
+            cell.textLabel!.attributedText = attributedText
         default:
             fatalError("What the fuck did you think ??")
         }
         return cell
     }
 
-    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var todoItem: ToDoItem?
 
         switch indexPath.section {
