@@ -3,3 +3,4 @@
 //
 
 #import <KIF/KIF.h>
+#import <TOCScreenshot/TOCScreenshot.h>

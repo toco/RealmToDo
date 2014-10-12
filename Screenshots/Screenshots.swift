@@ -16,6 +16,12 @@ class Screenshots: SwiftKIFTestCase {
     
     override func beforeAll() {
         resetDatabase()
+		let screenshotGroupPath = __FILE__.stringByDeletingLastPathComponent.stringByDeletingLastPathComponent.stringByAppendingPathComponent("shots")
+		TOCScreenshot.setScreenshotGroupFolderPath(screenshotGroupPath)
+    }
+
+    override func afterAll() {
+        println("file://\(TOCScreenshot.screenshotGroupFolderPath())")
     }
         
 	func testTakeScreenshots() {
@@ -24,14 +30,19 @@ class Screenshots: SwiftKIFTestCase {
 		tester().waitForKeyboard()
 		tester().enterTextIntoCurrentFirstResponder(localizedString("UploadText"))
 		
-		
+		TOCScreenshot.takeScreenshotNamed("1 CreateItem")
+
 		tester().tapViewWithAccessibilityLabel(localizedAccessibilityString("done.button"))
 		
 		tester().waitForTimeInterval(0.5)
-		
+		        
+		TOCScreenshot.takeScreenshotNamed("2 ItemList")
+
 		
 		tester().tapViewWithAccessibilityLabel(localizedString("TakeScreenshotsText"))
-		
+	
+		TOCScreenshot.takeScreenshotNamed("3 DoneItem")
+
 	}
 	
 	
