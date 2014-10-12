@@ -69,7 +69,19 @@
       </MacroExpansion>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-AutomaticMinimizationEnabled 0"
+            argument = "-AutomaticMinimizationEnabled 0&#10;"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-AppleLanguages (en)"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-AppleLocale en_US"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-KeyboardLastUsed &quot;en_US@hw=US;sw=QWERTY&quot;&#10;"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
@@ -82,6 +94,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "DDDD083A19D9AC3F001DC81A"
+            BuildableName = "Screenshots.xctest"
+            BlueprintName = "Screenshots"
+            ReferencedContainer = "container:RealmToDo.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
