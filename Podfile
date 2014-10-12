@@ -11,6 +11,8 @@ end
 
 target "Screenshots" do
     pod 'KIF'
+	pod 'TOCScreenshot'
+	pod 'SimulatorStatusMagic'
 
 end
 

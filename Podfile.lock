@@ -2,11 +2,17 @@ PODS:
   - KIF (3.0.8):
     - KIF/XCTest
   - KIF/XCTest (3.0.8)
+  - SimulatorStatusMagic (1.0)
+  - TOCScreenshot (1.0.0)
 
 DEPENDENCIES:
   - KIF
+  - SimulatorStatusMagic
+  - TOCScreenshot
 
 SPEC CHECKSUMS:
   KIF: 2db5e8cf59136dd1267d49cca0d55883389b09d3
+  SimulatorStatusMagic: b6c836456183f059ee88a4da348fbe354c6078d1
+  TOCScreenshot: ed0dd12ef298781db5922e375abb945f9f5c8c1e
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.34.2
