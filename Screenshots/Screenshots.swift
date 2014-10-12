@@ -18,10 +18,12 @@ class Screenshots: SwiftKIFTestCase {
         resetDatabase()
 		let screenshotGroupPath = __FILE__.stringByDeletingLastPathComponent.stringByDeletingLastPathComponent.stringByAppendingPathComponent("shots")
 		TOCScreenshot.setScreenshotGroupFolderPath(screenshotGroupPath)
+		SDStatusBarManager.sharedInstance().enableOverrides()
     }
 
     override func afterAll() {
         println("file://\(TOCScreenshot.screenshotGroupFolderPath())")
+		SDStatusBarManager.sharedInstance().disableOverrides()
     }
         
 	func testTakeScreenshots() {
